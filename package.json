@@ -1,0 +1,20 @@
+{
+  "name": "node--webrtc",
+  "version": "1.0.0",
+  "description": "Проектная работа по курсу Node.js Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papaAndrew/node--webrtc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papaAndrew/node--webrtc/issues"
+  },
+  "homepage": "https://github.com/papaAndrew/node--webrtc#readme"
+}
