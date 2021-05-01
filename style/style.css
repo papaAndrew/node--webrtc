@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+div {
+  border: 1px solid gray;
+  margin: 5px;
+}
+
+main {
+  height: 100vh;
+  border: 1px solid gray;
+  margin: 5px;
+  display:flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+/*
+video{
+  -webkit-filter:blur(1px);
+}
+*/
+
+header {
+  height: 10%;
+  background-color: lightskyblue;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  border: 1px solid gray;
+  margin: 5px;
+}
+
+section {
+  height: 80%;
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 2%;
+}
+
+footer {
+  height: 10%;
+  background-color: cadetblue;
+  text-align: center;
+  flex-wrap: wrap;
+  border: 1px solid gray;
+  margin: 5px;
+}

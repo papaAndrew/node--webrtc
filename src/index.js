@@ -1,5 +1,9 @@
 
-window.onload = function(){
+//import "../style/style.css";
+
+
+
+/* window.onload = function(){
   navigator.webkitGetUserMedia(
     { video: true },
     getStream,
@@ -14,3 +18,5 @@ function getStream(stream) {
 function noStream(err) {
   
 }
+
+ */
