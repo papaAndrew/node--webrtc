@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/papaAndrew/node--webrtc/issues"
   },
-  "homepage": "https://github.com/papaAndrew/node--webrtc#readme"
+  "homepage": "https://github.com/papaAndrew/node--webrtc#readme",
+  "devDependencies": {
+    "node-static": "^0.7.11"
+  }
 }
