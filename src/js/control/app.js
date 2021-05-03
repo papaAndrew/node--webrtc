@@ -25,6 +25,7 @@ function hangUp() {
     el.srcObject = null;
   });
 }
+
 /**
  * отрисовка при обновлении страницы
  */
