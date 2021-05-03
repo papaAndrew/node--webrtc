@@ -1,5 +1,7 @@
+//import "./style/style.css";
 
-//import "../style/style.css";
+import { render } from "./js/control/app.js";
+
 
 
 
@@ -18,5 +20,5 @@ function getStream(stream) {
 function noStream(err) {
   
 }
-
  */
+render();
