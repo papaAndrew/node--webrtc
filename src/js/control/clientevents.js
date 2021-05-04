@@ -1,13 +1,10 @@
 import { createWebSocket } from "../model/webclient.js"
 
-export function clientConnectionOpen (evt) {
+function clientConnectionOpen (evt) {
   document.getElementById("text").disabled = false;
   document.getElementById("send").disabled = false;
 };
 
-export function clientConnectionError(evt) {
-  console.dir(evt);
-}
 
 
 function log(text) {
@@ -89,12 +86,5 @@ export function clientConnectionMessage (event) {
 };
 
 
-export function createWSConnection() {
-  
-  const conn = createWebSocket();
-  conn.onopen = clientConnectionOpen;
-  conn.onerror = clientConnectionError;
-  conn.onmessage = clientConnectionMessage;
 
-  return conn;
-}
+

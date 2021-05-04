@@ -49,3 +49,7 @@ footer {
   border: 1px solid gray;
   margin: 5px;
 }
+
+.status-online {
+  background-color: red;
+}

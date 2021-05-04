@@ -1,6 +1,9 @@
+import { connectToServer } from "../model/webclient.js";
 import { selectPhoneButtons, selectVideos } from "../view/persistent.js";
+import { DingMessenger } from "./dingmessenger.js";
 
 
+const messenger = new DingMessenger();
 
 function sendDing() {
 
@@ -39,4 +42,14 @@ export function render() {
    selectPhoneButtons("hup").forEach((el) => {
     el.addEventListener("click", hangUp);
   });
+}
+
+
+
+
+export function connect() {
+
+  connectToServer(
+    () => messenger.setNetStatus(1),
+    () => messenger.setNetStatus(0));
 }

@@ -1,18 +1,27 @@
 
+const serverUrl = "ws://localhost:6503";
+let conn = null;
 
-export function createWebSocket() {
-  var serverUrl;
-  var scheme = "ws";
+function log(text) {
+  var time = new Date();
 
-  // If this is an HTTPS connection, we have to use a secure WebSocket
-  // connection too, so add another "s" to the scheme.
-/*
-  if (document.location.protocol === "https:") {
-    scheme += "s";
-  }
-*/  
-  serverUrl = scheme + "://" + myHostname + ":6503";
-
-  log(`Connecting to server: ${serverUrl}`);
-  return new WebSocket(serverUrl, "json");
+  console.log(`[${time.toLocaleTimeString()}]\t${text}`);
 }
+
+export function connectToServer(onConnect, onError) {
+//  log(`Connecting to server: ${serverUrl}`);
+  conn = new WebSocket(serverUrl, "json");
+  conn.onopen = onConnect;
+  conn.onerror = onError || log;
+}
+
+export function sendToServer(data,  onResponse, onError) {
+  
+  var msg = JSON.stringify(data);
+  conn.onmessage = onResponse;
+  conn.onerror = onError || log;
+  log(`Sending message: ${msg}`);
+
+  conn.send(msg);
+}
+

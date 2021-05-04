@@ -1,4 +1,4 @@
-const [MAIN_CLASS_NAME, MAIN_MIDDLE_NAME, MAIN_FOOTER_NAME] = [".main", "middle", "footer"]; 
+const [MAIN_CLASS_NAME, MAIN_HEADER_NAME, MAIN_MIDDLE_NAME, MAIN_FOOTER_NAME] = [".main", "header", "middle", "footer"]; 
 
 function selectMainElement(name) {
   const selector = `${MAIN_CLASS_NAME}-${name}`;
@@ -16,6 +16,7 @@ export function selectPhoneButtons(name) {
 
 /**
  * Объекты video
+ * @param {string} name 
  * @returns {HTMLElement}
  */
  export function selectVideos(name) {
@@ -24,3 +25,12 @@ export function selectPhoneButtons(name) {
   return [selectMainElement(MAIN_MIDDLE_NAME).querySelector(selector)];
 }
 
+/**
+ * Индикаторы онлайн-статуса
+ * @param {string} name 
+ * @returns {HTMLElement}
+ */
+export function selectNetStatusElements(name) {
+  const selector = `${MAIN_CLASS_NAME}-${MAIN_HEADER_NAME}-${name}`;
+  return [selectMainElement(MAIN_HEADER_NAME).querySelector(selector)];
+}
